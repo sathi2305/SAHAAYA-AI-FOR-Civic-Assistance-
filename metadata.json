@@ -1,0 +1,6 @@
+{
+  "name": "SAHAAYA AI — Civic Assistance Platform",
+  "description": "AI-powered civic assistance platform helping citizens report, analyze, draft, and track public-service issues with intelligent guidance and interactive maps.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

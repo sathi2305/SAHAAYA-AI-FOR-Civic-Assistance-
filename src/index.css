@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #020817;
+    --sidebar-bg: #06142B;
+    --panel-bg: #071B38;
+    --surface-elevated: #0A2040;
+    --border-subtle: #164A80;
+    --accent-cyan: #00C8FF;
+    --accent-blue: #246BFD;
+    --accent-violet: #7028FF;
+    --text-primary: #EAF3FF;
+    --text-secondary: #8EA9CF;
+    --status-success: #16D6B0;
+    --status-warning: #FFB547;
+    --status-error: #FF5D73;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom luminous glow utilities */
+.glow-border {
+  border: 1px solid rgba(0, 200, 255, 0.25);
+  box-shadow: 0 0 15px -3px rgba(0, 200, 255, 0.15), inset 0 0 15px -3px rgba(0, 200, 255, 0.05);
+}
+
+.glow-border-active {
+  border: 1px solid rgba(0, 200, 255, 0.6);
+  box-shadow: 0 0 20px -2px rgba(0, 200, 255, 0.35);
+}
+
+.glow-violet {
+  box-shadow: 0 0 25px -4px rgba(112, 40, 255, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(0, 200, 255, 0.35);
+}
+
+/* Dark mode leaflet map styling */
+.leaflet-container {
+  background: #06142b !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.dark-tiles .leaflet-tile {
+  filter: brightness(0.65) invert(1) contrast(2.6) hue-rotate(200deg) saturate(0.35);
+}
+
+.leaflet-popup-content-wrapper {
+  background: #071B38 !important;
+  color: #EAF3FF !important;
+  border: 1px solid #164A80 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 200, 255, 0.2) !important;
+}
+
+.leaflet-popup-tip {
+  background: #071B38 !important;
+  border: 1px solid #164A80 !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(7, 27, 56, 0.75) !important;
+  color: #8EA9CF !important;
+  font-size: 10px !important;
+  border-radius: 6px 0 0 0 !important;
+  padding: 2px 6px !important;
+}
+
+.leaflet-control-attribution a {
+  color: #00C8FF !important;
+  text-decoration: none !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06142B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #164A80;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #246BFD;
+}
